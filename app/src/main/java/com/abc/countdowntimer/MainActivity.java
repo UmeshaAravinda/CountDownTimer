@@ -13,10 +13,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         countdown();
     }
-    private void countdown() {
-        final TextView textView = findViewById(R.id.textview);
 
-        final Handler handler = new Handler();{
+    private void countdown() {
+        final TextView textView = findViewById(R.id.textView);
+
+        final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
             public void run() {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(this,1000);
             }
         });
-        }
+
 
     }
 }
